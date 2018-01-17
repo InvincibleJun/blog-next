@@ -9,7 +9,7 @@
     "start": "next start",
     "init": "next init"
   },
-  "author": "",
+  "author": "chenjun",
   "license": "ISC",
   "dependencies": {
     "next": "^4.2.3",
