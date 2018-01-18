@@ -9,7 +9,7 @@
     "start": "next start",
     "init": "next init"
   },
-  "author": "",
+  "author": "chenjun",
   "license": "ISC",
   "dependencies": {
     "material-ui": "^0.20.0",
