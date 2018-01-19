@@ -41,17 +41,6 @@ class Index extends Component {
             </Down>
           </Title>
         </div>
-        <style jsx>{`
-        .container {
-          line-height: 40px;
-          height: 400px;
-          background-image: url(./static/image/bg-big.jpg);
-          overflow: hidden;  
-          opacity: 0.8;
-          box-shadow: 0 4px 5px 0px #ccc;
-        }
-        `}
-        </style>
       </Layout>
     );
   }
