@@ -1,8 +1,10 @@
 module.exports = {
-  webpack: (config, { dev }) => {
+  webpack: config => {
+    // Fixes npm packages that depend on `fs` module
+    config.node = {
+      fs: "empty"
+    };
 
-    // 修改config对象
-
-    return config
+    return config;
   }
-}
+};

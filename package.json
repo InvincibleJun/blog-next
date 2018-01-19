@@ -16,10 +16,6 @@
     "next": "^4.2.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-<<<<<<< HEAD
-    "redux": "^3.7.2"
-=======
     "styled-components": "^2.4.0"
->>>>>>> ac723f5d07b6b43db79310540e7cf285022bf0db
   }
 }

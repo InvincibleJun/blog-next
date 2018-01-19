@@ -1,109 +1,94 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+var _getPrototypeOf = require("babel-runtime/core-js/object/get-prototype-of");
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = require('babel-runtime/helpers/createClass');
+var _createClass2 = require("babel-runtime/helpers/createClass");
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+var _possibleConstructorReturn2 = require("babel-runtime/helpers/possibleConstructorReturn");
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = require('babel-runtime/helpers/inherits');
+var _inherits2 = require("babel-runtime/helpers/inherits");
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');
-
-var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
-
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styledComponents = require('styled-components');
+var _head = require("next\\dist\\lib\\head.js");
 
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
+var _head2 = _interopRequireDefault(_head);
 
-var _link = require('next\\dist\\lib\\link.js');
-
-var _link2 = _interopRequireDefault(_link);
+var _propTypes = require("prop-types");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = 'E:\\blog\\blog-front-user\\components\\Head.js';
+var _jsxFileName = "E:\\blog-next\\components\\head.js";
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  line-height: 40px;\n  background: white;\n  overflow: hidden;\n'], ['\n  line-height: 40px;\n  background: white;\n  overflow: hidden;\n']),
-    _templateObject2 = (0, _taggedTemplateLiteral3.default)(['\n  float: left;\n  color: white;\n  text-align: center;\n  font-size: 14px;\n  width: 120px;\n  background-color: black;  \n'], ['\n  float: left;\n  color: white;\n  text-align: center;\n  font-size: 14px;\n  width: 120px;\n  background-color: black;  \n']),
-    _templateObject3 = (0, _taggedTemplateLiteral3.default)(['\n  marigin-left:120px;\n  padding-right: 200px;\n  &>a {\n    float: right;\n    width: 100px;\n    margin: 0 10px;\n    font-size: 14px;\n  }\n'], ['\n  marigin-left:120px;\n  padding-right: 200px;\n  &>a {\n    float: right;\n    width: 100px;\n    margin: 0 10px;\n    font-size: 14px;\n  }\n']);
 
-var Container = _styledComponents2.default.div(_templateObject);
-var Logo = _styledComponents2.default.div(_templateObject2);
+var Head = function (_Component) {
+  (0, _inherits3.default)(Head, _Component);
 
-var MenuList = _styledComponents2.default.div(_templateObject3);
+  function Head() {
+    (0, _classCallCheck3.default)(this, Head);
 
-var Menu = function (_Component) {
-  (0, _inherits3.default)(Menu, _Component);
-
-  function Menu() {
-    (0, _classCallCheck3.default)(this, Menu);
-
-    return (0, _possibleConstructorReturn3.default)(this, (Menu.__proto__ || (0, _getPrototypeOf2.default)(Menu)).apply(this, arguments));
+    return (0, _possibleConstructorReturn3.default)(this, (Head.__proto__ || (0, _getPrototypeOf2.default)(Head)).apply(this, arguments));
   }
 
-  (0, _createClass3.default)(Menu, [{
-    key: 'render',
+  (0, _createClass3.default)(Head, [{
+    key: "render",
     value: function render() {
-      return _react2.default.createElement(Container, {
+      var title = this.props.title;
+
+      return _react2.default.createElement(_head2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 9
         }
-      }, _react2.default.createElement(Logo, {
+      }, _react2.default.createElement("meta", { charset: "UTF-8", __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        }
+      }), _react2.default.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 11
         }
-      }, 'Jarvan\'s Blog'), _react2.default.createElement(MenuList, {
-        __source: {
+      }, title || ""), _react2.default.createElement("meta", { name: "viewport", content: "width=device-width, initial-scale=1", __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 12
         }
-      }, _react2.default.createElement(_link2.default, { href: '/', __source: {
+      }), _react2.default.createElement("link", { rel: "stylesheet", href: "./static/css/reset.css", __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 13
         }
-      }, _react2.default.createElement('a', {
-        __source: {
+      }), _react2.default.createElement("link", { rel: "stylesheet", href: "./static/css/index.css", __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 14
         }
-      }, 'Home')), _react2.default.createElement(_link2.default, { href: '/blog', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
-        }
-      }, _react2.default.createElement('a', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
-        }
-      }, 'Blog'))));
+      }));
     }
   }]);
 
-  return Menu;
+  return Head;
 }(_react.Component);
 
-exports.default = Menu;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHNcXEhlYWQuanMiXSwibmFtZXMiOlsiUmVhY3QiLCJDb21wb25lbnQiLCJzdHlsZWQiLCJMaW5rIiwiQ29udGFpbmVyIiwiZGl2IiwiTG9nbyIsIk1lbnVMaXN0IiwiTWVudSJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQU87Ozs7QUFDUCxBQUFPOzs7Ozs7Ozs7Ozs7QUFFUCxJQUFNLFlBQVksMkJBQVosQUFBbUIsSUFBekI7QUFLQSxJQUFNLE9BQU8sMkJBQVAsQUFBYyxJQUFwQjs7QUFTQSxJQUFNLFdBQVcsMkJBQVgsQUFBa0IsSUFBeEI7O0lBV00sQTs7Ozs7Ozs7Ozs7NkJBQ0ssQUFDUDs2QkFDRyxjQUFEOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLGtCQUNHLGNBQUQ7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxTQURGLEFBQ0UsQUFDQSxtQ0FBQyxjQUFEOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSx5QkFDRSxBQUFDLGdDQUFLLE1BQU4sQUFBVztvQkFBWDtzQkFBQSxBQUFlO0FBQWY7eUJBQWUsY0FBQTs7b0JBQUE7c0JBQUE7QUFBQTtBQUFBLFNBRGpCLEFBQ0UsQUFBZSxBQUNmLDBCQUFBLEFBQUMsZ0NBQUssTUFBTixBQUFXO29CQUFYO3NCQUFBLEFBQW1CO0FBQW5CO3lCQUFtQixjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsU0FMekIsQUFDRSxBQUVFLEFBRUUsQUFBbUIsQUFNMUI7Ozs7O0FBYmdCLEEsQUFnQm5COztrQkFBQSxBQUFlIiwiZmlsZSI6IkhlYWQuanMiLCJzb3VyY2VSb290IjoiRTovYmxvZy9ibG9nLWZyb250LXVzZXIifQ==
+Head.propTypes = {
+  title: _propTypes.string
+};
+
+exports.default = Head;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHNcXGhlYWQuanMiXSwibmFtZXMiOlsiUmVhY3QiLCJDb21wb25lbnQiLCJOZXh0SGVhZCIsInN0cmluZyIsIkhlYWQiLCJ0aXRsZSIsInByb3BzIiwicHJvcFR5cGVzIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFPOzs7O0FBQ1AsQUFBUzs7Ozs7OztJQUVILEE7Ozs7Ozs7Ozs7OzZCQUNLO1VBQUEsQUFDQyxRQUFVLEtBRFgsQUFDZ0IsTUFEaEIsQUFDQyxBQUNSOzs2QkFDRSxBQUFDOztvQkFBRDtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLDBDQUNRLFNBQU4sQUFBYztvQkFBZDtzQkFERixBQUNFLEFBQ0E7QUFEQTswQkFDQSxjQUFBOztvQkFBQTtzQkFBQSxBQUFRO0FBQVI7QUFBQSxrQkFGRixBQUVFLEFBQWlCLEFBQ2pCLDZDQUFNLE1BQU4sQUFBVyxZQUFXLFNBQXRCLEFBQThCO29CQUE5QjtzQkFIRixBQUdFLEFBQ0E7QUFEQTtrREFDTSxLQUFOLEFBQVUsY0FBYSxNQUF2QixBQUE0QjtvQkFBNUI7c0JBSkYsQUFJRSxBQUNBO0FBREE7a0RBQ00sS0FBTixBQUFVLGNBQWEsTUFBdkIsQUFBNEI7b0JBQTVCO3NCQU5KLEFBQ0UsQUFLRSxBQUdMO0FBSEs7Ozs7OztBLEFBVFc7O0FBZW5CLEtBQUEsQUFBSztBQUFMLEFBQWlCLEFBQ1IsQUFHVDtBQUppQixBQUNmOztrQkFHRixBQUFlIiwiZmlsZSI6ImhlYWQuanMiLCJzb3VyY2VSb290IjoiRTovYmxvZy1uZXh0In0=
