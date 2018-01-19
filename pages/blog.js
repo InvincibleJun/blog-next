@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import List from "../components/blog/list";
 import {
   blue500,
   green50,
@@ -9,50 +10,37 @@ import {
 import Layout from "../components/Layout";
 import css from "styled-jsx/css";
 
-// const scoped = resolveScopedStyles(
-//   <scope>
-//     <style jsx>{".link { color: green }"}</style>
-//   </scope>
-// );
-
-const Header = styled.div`
-  background-color: ${blue500};
-  height: 80px;
-`;
-const Container = styled.div``;
-
-const List = styled.div``;
-
-const User = styled.div``;
-
 class Blog extends Component {
-  // constructor(props) {
-  //   super(props)
-  // }
+  static getInitialProps({ req }) {
+    const userAgent = req ? req.headers["user-agent"] : navigator.userAgent;
+    return { userAgent };
+  }
   render() {
     return (
       <Layout>
-        <div className="header">header</div>
-        <div className="container">
-          <info>
-            <div className="chunk-border user" />
-            <div className="chunk-border user" />
-          </info>
-          <div className="chunk-border list" />
+        <div className="blog-header">header{this.props.userAgent}</div>
+        <div className="blog-container">
+          <div className="blog-info">
+            <div className="chunk-border blog-user" />
+            <div className="chunk-border blog-user" />
+          </div>
+          <div className="chunk-border blog-list">
+            <List />
+          </div>
         </div>
         <style jsx>{`
-          .header {
+          .blog-header {
             background-color: ${blue500};
             height: 80px;
           }
-          .container {
+          .blog-container {
             width: 1080px;
             margin: 20px auto;
             background-color: ${green50};
             position: relative;
             overflow: auto;
           }
-          .info {
+          .blog-info {
             width: 260px;
             float: right;
             right: 0;
@@ -60,12 +48,12 @@ class Blog extends Component {
             height: 800px;
             background-color: ${amber500};
           }
-          .user {
+          .blog-user {
             height: 300px;
             background-color: ${blueGrey500};
             margin-bottom: 20px;
           }
-          .list {
+          .blog-list {
             width: 800px;
             height: 400px;
             background-color: ${amber500};

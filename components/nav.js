@@ -18,6 +18,7 @@ class Menu extends Component {
         <style jsx>{`
           div {
             line-height: 40px;
+            height: 40px;
           }
           p {
             float: left;
