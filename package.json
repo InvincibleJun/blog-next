@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 8000",
     "build": "next build",
     "start": "next start",
     "init": "next init"
@@ -12,6 +12,7 @@
   "author": "chenjun",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "material-ui": "^0.20.0",
     "next": "^4.2.3",
     "react": "^16.2.0",

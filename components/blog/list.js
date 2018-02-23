@@ -7,8 +7,14 @@ class List extends Component {
   }
 
   render() {
-    const { userAgent } = this.props;
-    return <div>{this.props.userAgent}</div>;
+    const { data } = this.props;
+    return data.map(art => (
+      <div key={art.title}>
+        <h3>{art.title}</h3>
+        <p>{art.desc}</p>
+        {/* <div dangerouslySetInnerHTML={{ __html: art.body }}></div> */}
+      </div>
+    ))
   }
 }
 

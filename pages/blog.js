@@ -10,14 +10,21 @@ import {
 import Layout from "../components/Layout";
 import css from "styled-jsx/css";
 
+import { getArticle } from '../services/blog'
+import list from "../components/blog/list";
+
 class Blog extends Component {
-  static getInitialProps({ req }) {
-    const userAgent = req ? req.headers["user-agent"] : navigator.userAgent;
-    return { userAgent };
+  static async getInitialProps({ req }) {
+    let res = await getArticle();
+    if (res) {
+      return { list: res.data.data }
+    }
   }
   render() {
+    const { list } = this.props;
+
     return (
-      <Layout>
+      < Layout >
         <div className="blog-header">header{this.props.userAgent}</div>
         <div className="blog-container">
           <div className="blog-info">
@@ -25,7 +32,7 @@ class Blog extends Component {
             <div className="chunk-border blog-user" />
           </div>
           <div className="chunk-border blog-list">
-            <List />
+            <List data={list} />
           </div>
         </div>
         <style jsx>{`
@@ -59,7 +66,7 @@ class Blog extends Component {
             background-color: ${amber500};
           }
         `}</style>
-      </Layout>
+      </Layout >
     );
   }
 }
