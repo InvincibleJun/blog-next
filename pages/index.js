@@ -8,8 +8,8 @@ class Index extends Component {
   render() {
     return (
       <Layout>
-        <div className="container" />
-      </Layout>
+        <div className="container">123</div>
+      </Layout >
     );
   }
 }

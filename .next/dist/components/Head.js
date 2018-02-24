@@ -58,7 +58,7 @@ var Head = function (_Component) {
           fileName: _jsxFileName,
           lineNumber: 9
         }
-      }, _react2.default.createElement("meta", { charset: "UTF-8", __source: {
+      }, _react2.default.createElement("meta", { charSet: "UTF-8", __source: {
           fileName: _jsxFileName,
           lineNumber: 10
         }
@@ -71,11 +71,11 @@ var Head = function (_Component) {
           fileName: _jsxFileName,
           lineNumber: 12
         }
-      }), _react2.default.createElement("link", { rel: "stylesheet", href: "./static/css/reset.css", __source: {
+      }), _react2.default.createElement("link", { rel: "stylesheet", href: "/static/css/reset.css", __source: {
           fileName: _jsxFileName,
           lineNumber: 13
         }
-      }), _react2.default.createElement("link", { rel: "stylesheet", href: "./static/css/index.css", __source: {
+      }), _react2.default.createElement("link", { rel: "stylesheet", href: "/static/css/index.css", __source: {
           fileName: _jsxFileName,
           lineNumber: 14
         }
