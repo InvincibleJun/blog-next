@@ -1,10 +1,12 @@
-import axios from 'axios';
+import axios from "axios";
 
-const baseUrl = 'http://localhost:10086'
+const baseUrl = "http://localhost:10086";
 
-export default function (url, arg) {
+export default function(url, arg = {}) {
+  const { method = "get", params } = arg;
   return axios({
-    method: arg.method,
-    url: baseUrl + url
+    method: method,
+    url: baseUrl + url,
+    params
   });
 }
