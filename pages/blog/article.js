@@ -23,7 +23,6 @@ class Article extends Component {
           <h3>{data.title}</h3>
           <div dangerouslySetInnerHTML={{ __html: data.body }} />
         </div>
-        <style jsx>{``}</style>
       </Blog>
     );
   }

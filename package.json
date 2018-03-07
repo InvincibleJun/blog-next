@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next -p 8000",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js NODE_ENV=production",
     "init": "next init"
   },
   "author": "chenjun",

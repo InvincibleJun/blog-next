@@ -1,3 +1,5 @@
 .chunk-border {
   box-shadow: 0 0 2px 2px #ccc;
+  padding: 15px;
+  border-radius: 5px;
 }

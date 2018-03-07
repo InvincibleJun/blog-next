@@ -11,9 +11,8 @@ app
     const server = express();
 
     server.get("/blog/:_id", (req, res) => {
-      const actualPage = "/blog/article";
       const queryParams = { _id: req.params._id };
-      app.render(req, res, actualPage, queryParams);
+      app.render(req, res, "/blog/article", queryParams);
     });
 
     server.get("*", (req, res) => {

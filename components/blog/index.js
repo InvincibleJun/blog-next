@@ -7,19 +7,10 @@ import {
   blueGrey500
 } from "material-ui/styles/colors";
 import Layout from "../../components/Layout";
-
-import { getArticle } from "../../services/blog";
+import NewList from './new-list'
 
 class Blog extends Component {
-  // static async getInitialProps({ req }) {
-  //   let res = await getArticle();
-  //   if (res) {
-  //     return { list: res.data.data }
-  //   }
-  // }
   render() {
-    const { list } = this.props;
-
     return (
       <Layout>
         <div className="blog-header">
@@ -27,8 +18,8 @@ class Blog extends Component {
         </div>
         <div className="blog-container">
           <div className="blog-info">
-            <div className="chunk-border blog-user" />
-            <div className="chunk-border blog-user" />
+            <NewList />
+            <div className="blog-user" />
           </div>
           <div className="blog-main">{this.props.children}</div>
         </div>
@@ -57,12 +48,6 @@ class Blog extends Component {
             right: 0;
             top: 0;
             height: 800px;
-            background-color: ${amber500};
-          }
-          .blog-user {
-            height: 300px;
-            background-color: ${blueGrey500};
-            margin-bottom: 20px;
           }
           .blog-list {
             width: 800px;

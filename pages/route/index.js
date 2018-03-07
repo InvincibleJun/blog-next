@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import bg from '../../assets/img/bg-big.jpg';
+// import bg from '../../assets/img/bg-big.jpg';
 import FontIcon from 'material-ui/FontIcon';
 import { blue500, red500, greenA200 } from 'material-ui/styles/colors';
 
 const Container = styled.div`
   line-height: 40px;
   height: 400px;
-  background-image: url(${bg});
+  /* background-image: url(${bg}); */
   overflow: hidden;  
   opacity: 0.8;
   box-shadow: 0 4px 5px 0px #ccc;
