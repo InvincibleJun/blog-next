@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "node server.js NODE_ENV=production",
+    "start": "set NODE_ENV=production && node server.js ",
     "init": "next init"
   },
   "author": "chenjun",
