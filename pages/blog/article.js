@@ -2,6 +2,7 @@ import Blog from "../../components/blog";
 import React, { Component } from "react";
 import { getOne } from "../../services/blog";
 import NextHead from "next/head";
+import marked from 'marked';
 // import "../../assets/css/github-markdonw.css";
 class Article extends Component {
   static async getInitialProps({ req, query }) {
@@ -21,7 +22,7 @@ class Article extends Component {
         </NextHead>
         <div className="markdown-body">
           <h3>{data.title}</h3>
-          <div dangerouslySetInnerHTML={{ __html: data.body }} />
+          <div dangerouslySetInnerHTML={{ __html: marked(data.body) }} />
         </div>
       </Blog>
     );
