@@ -21,7 +21,7 @@ class Blog extends Component {
             <NewList />
             <div className="blog-user" />
           </div>
-          <div className="blog-main">{this.props.children}</div>
+          <div className="blog-main chunk-border">{this.props.children}</div>
         </div>
         <style jsx>{`
           .blog-header {

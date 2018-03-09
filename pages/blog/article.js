@@ -20,10 +20,12 @@ class Article extends Component {
         <NextHead>
           <link rel="stylesheet" href="/static/css/github-markdonw.css" />
         </NextHead>
-        <div className="markdown-body">
-          <h3>{data.title}</h3>
-          <div dangerouslySetInnerHTML={{ __html: marked(data.body) }} />
-        </div>
+        <h3>{data.title}</h3>
+        <hr />
+        <div className="markdown-body" dangerouslySetInnerHTML={{ __html: marked(data.body) }} />
+        <style jsx>{`
+        `}
+        </style>
       </Blog>
     );
   }
