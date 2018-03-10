@@ -5,7 +5,7 @@ import Link from "next/link";
 class Menu extends Component {
   render() {
     return (
-      <div>
+      <div className="animated fadeInDown">
         <p>Jarvan's Blog</p>
         <ul>
           <Link href="/">
@@ -19,6 +19,7 @@ class Menu extends Component {
           div {
             line-height: 40px;
             height: 40px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
           }
           p {
             float: left;
@@ -29,6 +30,8 @@ class Menu extends Component {
             background-color: black;
           }
           ul {
+            height: 40px;
+            background-color: #fff;      
             marigin-left: 120px;
             padding-right: 200px;
           }

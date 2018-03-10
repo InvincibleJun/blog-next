@@ -21,7 +21,7 @@ app
 
     server.listen(8000, err => {
       if (err) throw err;
-      console.log("> next start at 3000");
+      console.log("> next start at 8000");
     });
   })
   .catch(ex => {

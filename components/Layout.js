@@ -5,7 +5,6 @@ import React, { Component } from "react";
 import Nav from "./nav";
 import Head from "./Head";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-
 class Layout extends Component {
   render() {
     return (

@@ -12,6 +12,7 @@ class Head extends Component {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="/static/css/reset.css" />
         <link rel="stylesheet" href="/static/css/index.css" />
+        <link rel="stylesheet" href="/static/css/animate.css" />
       </NextHead>
     );
   }
