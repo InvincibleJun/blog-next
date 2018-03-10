@@ -7,7 +7,7 @@ import {
   blueGrey500
 } from "material-ui/styles/colors";
 import Layout from "../../components/Layout";
-import NewList from './new-list'
+import NewList from "./new-list";
 
 class Blog extends Component {
   render() {
@@ -17,11 +17,7 @@ class Blog extends Component {
           <h4>may the force be with you!</h4>
         </div>
         <div className="blog-container">
-          <div className="blog-info">
-            <NewList />
-            <div className="blog-user" />
-          </div>
-          <div className="blog-main chunk-border">{this.props.children}</div>
+          <div>{this.props.children}</div>
         </div>
         <style jsx>{`
           .blog-header {
@@ -33,9 +29,6 @@ class Blog extends Component {
             line-height: 80px;
             margin-left: 40px;
             color: white;
-          }
-          .blog-main {
-            width: 800px;
           }
           .blog-container {
             width: 1080px;
