@@ -13,6 +13,7 @@ class Head extends Component {
         <link rel="stylesheet" href="/static/css/reset.css" />
         <link rel="stylesheet" href="/static/css/index.css" />
         <link rel="stylesheet" href="/static/css/animate.css" />
+        <link rel="stylesheet" href="/static/css/github-markdonw.css" />
       </NextHead>
     );
   }

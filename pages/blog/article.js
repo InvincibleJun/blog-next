@@ -21,9 +21,6 @@ class Article extends Component {
     console.log(data)
     return (
       <Blog>
-        <NextHead>
-          <link rel="stylesheet" href="/static/css/github-markdonw.css" />
-        </NextHead>
         <div className="article-right">
           <Anchors data={data.anchors} />
         </div>
@@ -34,6 +31,8 @@ class Article extends Component {
             className="markdown-body"
             dangerouslySetInnerHTML={{ __html: data.body }}
           />
+          <div style={{ height: 500 }}>
+          </div>
         </div>
         <style jsx>{`
           .article-main {
@@ -44,7 +43,7 @@ class Article extends Component {
             float: right;
           }
         `}</style>
-      </Blog>
+      </Blog >
     );
   }
 }

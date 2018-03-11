@@ -16,8 +16,8 @@ class Layout extends Component {
           <Head title="首页" />
           <Nav />
           {this.props.children}
+          <Banner />
         </div>
-        <Banner />
       </MuiThemeProvider>
     );
   }

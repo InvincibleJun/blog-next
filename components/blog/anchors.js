@@ -26,7 +26,7 @@ class Anchors extends Component {
     let i = 0,
       l = anchorsEls.length,
       hash = "";
-    while (getTop(anchorsEls[i]) < sTop + 20 && i < l) {
+    while (i < l && getTop(anchorsEls[i]) < sTop + 20) {
       hash = anchorsEls[i].getAttribute("name");
       i++;
     }
@@ -69,7 +69,7 @@ class Anchors extends Component {
 }
 
 function getTop(el) {
-  if (el.offsetParent) {
+  if (el.offsetParent && el.offsetParent !== document.body) {
     return el.offsetTop + getTop(el.offsetParent);
   } else {
     return el.offsetTop;
