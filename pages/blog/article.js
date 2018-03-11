@@ -10,12 +10,15 @@ class Article extends Component {
     const { _id } = req ? req.params : query;
     if (_id) {
       let res = await getOne({ _id });
-      return { data: res.data.data };
+      let data = res.data.data
+      data.body = marked(data.body)
+      return { data };
     } else {
     }
   }
   render() {
     const { data } = this.props;
+    console.log(data)
     return (
       <Blog>
         <NextHead>
@@ -29,7 +32,7 @@ class Article extends Component {
           <hr />
           <div
             className="markdown-body"
-            dangerouslySetInnerHTML={{ __html: marked(data.body) }}
+            dangerouslySetInnerHTML={{ __html: data.body }}
           />
         </div>
         <style jsx>{`

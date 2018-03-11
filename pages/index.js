@@ -12,6 +12,13 @@ class Index extends Component {
           <div className="cover"></div>
           <div className="word animated fadeInLeft">may the force be with you</div>
         </div>
+        <div className="motto animated fadeIn">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;生活不能等待别人来安排，要自己去争取和奋斗；而不论其结果是喜是悲，但可以慰藉的是，你总不枉在这世界上活了一场。
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有了这样的认识，你就会珍重生活，而不会玩世不恭；同时，也会给人自身注入一种强大的内在力量。
+          <br />
+          <small>——《平凡的世界》</small>
+        </div>
         <style jsx>{`
         .container{
           background-image:url(./static/image/home-bg.jpg);
@@ -38,6 +45,16 @@ class Index extends Component {
           position: absolute;
           width: 100%;
           height: 500px;
+        }
+        .motto {
+          width: 400px;
+          margin: 50px auto;
+          line-height: 40px;
+          font-weight: normal;
+        }
+        small{
+          display:block;
+          text-align: right;
         }
         `}</style>
       </Layout >

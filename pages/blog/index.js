@@ -14,8 +14,9 @@ import Blog from "../../components/blog";
 class List extends Component {
   static async getInitialProps({ req }) {
     let res = await getArticle();
-    if (res) {
-      return { data: res.data.data };
+    let data = res.data.data;
+    if (data) {
+      return { data };
     }
   }
 

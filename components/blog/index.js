@@ -34,6 +34,7 @@ class Blog extends Component {
             width: 1080px;
             margin: 20px auto 60px;
             position: relative;
+            min-height: 600px;
           }
           .blog-info {
             width: 260px;

@@ -2,10 +2,21 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
+let isCustom = false;
 class Menu extends Component {
+  state = {
+    isCustom
+  }
+  componentDidMount() {
+    isCustom = true;
+    this.refs['title'].addEventListener("webkitAnimationEnd", () => {
+      this.setState({ isCustom })
+    });
+  }
   render() {
+    const { isCustom } = this.state
     return (
-      <div className="animated fadeInDown">
+      <div className={`animated ${isCustom ? '' : 'fadeInDown'}`} ref="title">
         <p>Jarvan's Blog</p>
         <ul>
           <Link href="/">
