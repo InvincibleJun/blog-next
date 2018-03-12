@@ -7,7 +7,9 @@
     "dev": "node server.js dev",
     "build": "next build",
     "start": "set NODE_ENV=development && node server.js",
-    "init": "next init"
+    "init": "next init",
+    "lint": "eslint src --ext .js --cache --fix",
+    "pre-commit": "lint"
   },
   "author": "chenjun",
   "license": "ISC",
@@ -21,5 +23,9 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "styled-components": "^2.4.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "pre-commit": "^1.2.2"
   }
 }
