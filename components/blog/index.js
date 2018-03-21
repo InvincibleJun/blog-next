@@ -21,7 +21,11 @@ class Blog extends Component {
         </div>
         <style jsx>{`
           .blog-header {
-            background-color: ${grey900};
+            background: #282537;
+            background-image: -webkit-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+            background-image: -moz-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+            background-image: -o-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+            background-image: radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
             height: 80px;
             overflow: hidden;
           }

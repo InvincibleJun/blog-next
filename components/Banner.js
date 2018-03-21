@@ -10,7 +10,11 @@ class Banner extends Component {
         <style jsx>{`
         .banner{
           height: 60px;
-          background-color: black;
+          background: #282537;
+          background-image: -webkit-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+          background-image: -moz-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+          background-image: -o-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+          background-image: radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
           bottom: 0;
           width: 100%;
         }

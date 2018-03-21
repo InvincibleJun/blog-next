@@ -48,12 +48,9 @@ var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = "E:\\blog\\blog-next\\components\\Layout.js";
 // import '../assets/css/reset.css';
 // import '../assets/css/index.css';
 // import '../assets/fonts/iconfont.css';
-
-
 var Layout = function (_Component) {
   (0, _inherits3.default)(Layout, _Component);
 
@@ -66,31 +63,7 @@ var Layout = function (_Component) {
   (0, _createClass3.default)(Layout, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement(_MuiThemeProvider2.default, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        }
-      }, _react2.default.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15
-        }
-      }, _react2.default.createElement(_Head2.default, { title: "\u9996\u9875", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16
-        }
-      }), _react2.default.createElement(_nav2.default, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 17
-        }
-      }), this.props.children, _react2.default.createElement(_Banner2.default, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19
-        }
-      })));
+      return _react2.default.createElement(_MuiThemeProvider2.default, null, _react2.default.createElement("div", null, _react2.default.createElement(_Head2.default, { title: "\u9996\u9875" }), _react2.default.createElement(_nav2.default, null), this.props.children, _react2.default.createElement(_Banner2.default, null)));
     }
   }]);
 
@@ -98,4 +71,3 @@ var Layout = function (_Component) {
 }(_react.Component);
 
 exports.default = (0, _index.withRouter)(Layout);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHNcXExheW91dC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIndpdGhSb3V0ZXIiLCJOYXYiLCJIZWFkIiwiQmFubmVyIiwiTXVpVGhlbWVQcm92aWRlciIsIkxheW91dCIsInByb3BzIiwiY2hpbGRyZW4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQVM7O0FBSVQsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQU8sQUFBVTs7OztBQUNqQixBQUFPLEFBQVk7Ozs7QUFFbkIsQUFBTzs7Ozs7OztBQVBQO0FBQ0E7QUFDQTs7O0ksQUFNTTs7Ozs7Ozs7Ozs7NkJBQ0ssQUFDUDs2QkFDRSxBQUFDOztvQkFBRDtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLGtCQUNFLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLHlCQUNFLEFBQUMsZ0NBQUssT0FBTixBQUFZO29CQUFaO3NCQURGLEFBQ0UsQUFDQTtBQURBOzBCQUNBLEFBQUM7O29CQUFEO3NCQUZGLEFBRUUsQUFDQztBQUREO0FBQUEsZUFDQyxBQUFLLE1BSFIsQUFHYyxBQUNaLDBCQUFBLEFBQUM7O29CQUFEO3NCQU5OLEFBQ0UsQUFDRSxBQUlFLEFBSVA7QUFKTztBQUFBOzs7OztBQVJXLEEsQUFlckI7O2tCQUFlLHVCQUFmLEFBQWUsQUFBVyIsImZpbGUiOiJMYXlvdXQuanMiLCJzb3VyY2VSb290IjoiRTovYmxvZy9ibG9nLW5leHQifQ==

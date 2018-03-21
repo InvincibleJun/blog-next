@@ -12,7 +12,7 @@ import format from "../../utils/format";
 import Blog from "../../components/blog";
 
 class List extends Component {
-  static async getInitialProps({ req }) {
+  static async getInitialProps() {
     let res = await getArticle();
     let data = res.data.data;
     if (data) {
@@ -35,7 +35,6 @@ class List extends Component {
                 <h3>{art.title}</h3>
                 <p className="article-time">{format(art.createTime)}</p>
                 <p className="article-desc">{art.desc}</p>
-                {/* <div dangerouslySetInnerHTML={{ __html: art.body }}></div> */}
               </a>
             </Link>
           ))}

@@ -36,9 +36,6 @@ var _propTypes = require("prop-types");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = "E:\\blog\\blog-next\\components\\Head.js";
-
-
 var Head = function (_Component) {
   (0, _inherits3.default)(Head, _Component);
 
@@ -53,50 +50,11 @@ var Head = function (_Component) {
     value: function render() {
       var title = this.props.title;
 
-      return _react2.default.createElement(_head2.default, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 9
-        }
-      }, _react2.default.createElement("meta", { charSet: "UTF-8", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
-        }
-      }), _react2.default.createElement("title", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        }
-      }, title || ""), _react2.default.createElement("meta", { name: "viewport", content: "width=device-width, initial-scale=1", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        }
-      }), _react2.default.createElement("link", { rel: "stylesheet", href: "/static/css/reset.css", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        }
-      }), _react2.default.createElement("link", { rel: "stylesheet", href: "/static/css/index.css", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        }
-      }), _react2.default.createElement("link", { rel: "stylesheet", href: "/static/css/animate.css", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15
-        }
-      }), _react2.default.createElement("link", { rel: "stylesheet", href: "/static/css/github-markdonw.css", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16
-        }
-      }));
+      return _react2.default.createElement(_head2.default, null, _react2.default.createElement("meta", { charSet: "UTF-8" }), _react2.default.createElement("title", null, title || ""), _react2.default.createElement("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }), _react2.default.createElement("link", { rel: "stylesheet", href: "/static/css/reset.css" }), _react2.default.createElement("link", { rel: "stylesheet", href: "/static/css/index.css" }), _react2.default.createElement("link", { rel: "stylesheet", href: "/static/css/animate.css" }), _react2.default.createElement("link", { rel: "stylesheet", href: "/static/css/github-markdonw.css" }));
     }
   }]);
 
   return Head;
 }(_react.Component);
 
-Head.propTypes = {
-  title: _propTypes.string
-};
-
 exports.default = Head;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHNcXEhlYWQuanMiXSwibmFtZXMiOlsiUmVhY3QiLCJDb21wb25lbnQiLCJOZXh0SGVhZCIsInN0cmluZyIsIkhlYWQiLCJ0aXRsZSIsInByb3BzIiwicHJvcFR5cGVzIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFPOzs7O0FBQ1AsQUFBUzs7Ozs7OztJLEFBRUg7Ozs7Ozs7Ozs7OzZCQUNLO1VBQUEsQUFDQyxRQUFVLEtBRFgsQUFDZ0IsTUFEaEIsQUFDQyxBQUNSOzs2QkFDRSxBQUFDOztvQkFBRDtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLDBDQUNRLFNBQU4sQUFBYztvQkFBZDtzQkFERixBQUNFLEFBQ0E7QUFEQTswQkFDQSxjQUFBOztvQkFBQTtzQkFBQSxBQUFRO0FBQVI7QUFBQSxrQkFGRixBQUVFLEFBQWlCLEFBQ2pCLDZDQUFNLE1BQU4sQUFBVyxZQUFXLFNBQXRCLEFBQThCO29CQUE5QjtzQkFIRixBQUdFLEFBQ0E7QUFEQTtrREFDTSxLQUFOLEFBQVUsY0FBYSxNQUF2QixBQUE0QjtvQkFBNUI7c0JBSkYsQUFJRSxBQUNBO0FBREE7a0RBQ00sS0FBTixBQUFVLGNBQWEsTUFBdkIsQUFBNEI7b0JBQTVCO3NCQUxGLEFBS0UsQUFDQTtBQURBO2tEQUNNLEtBQU4sQUFBVSxjQUFhLE1BQXZCLEFBQTRCO29CQUE1QjtzQkFORixBQU1FLEFBQ0E7QUFEQTtrREFDTSxLQUFOLEFBQVUsY0FBYSxNQUF2QixBQUE0QjtvQkFBNUI7c0JBUkosQUFDRSxBQU9FLEFBR0w7QUFISzs7Ozs7O0EsQUFYVzs7QUFpQm5CLEtBQUEsQUFBSztBQUFMLEFBQWlCLEFBQ1IsQUFHVDtBQUppQixBQUNmOztrQkFHRixBQUFlIiwiZmlsZSI6IkhlYWQuanMiLCJzb3VyY2VSb290IjoiRTovYmxvZy9ibG9nLW5leHQifQ==

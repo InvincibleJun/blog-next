@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js dev",
+    "dev": "set NODE_ENV=development && node server.js",
     "build": "next build",
-    "start": "set NODE_ENV=development && node server.js",
+    "start": "node server.js",
     "init": "next init",
-    "lint": "eslint src --ext .js --cache --fix"
+    "lint": "eslint ./ --ext .js --cache --fix"
   },
   "pre-commit": [
-    "lint"
+    // "lint"
   ],
   "author": "chenjun",
   "license": "ISC",
@@ -27,7 +27,8 @@
     "styled-components": "^2.4.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
+    "babel-eslint": "^7.2.3",
+    "eslint-plugin-react": "^7.7.0",
     "pre-commit": "^1.2.2"
   }
 }

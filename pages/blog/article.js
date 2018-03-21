@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { getOne } from "../../services/blog";
 import NextHead from "next/head";
 import marked from "marked";
+import moment from "moment";
 // import "../../assets/css/github-markdonw.css";
 class Article extends Component {
   static async getInitialProps({ req, query }) {
@@ -13,7 +14,6 @@ class Article extends Component {
       let data = res.data.data
       data.body = marked(data.body)
       return { data };
-    } else {
     }
   }
   render() {
@@ -26,6 +26,7 @@ class Article extends Component {
         </div>
         <div className="chunk-border article-main">
           <h3>{data.title}</h3>
+          <p className="article-time">{moment(data.createTime).format('YYYY-MM-DD hh:mm:ss')}</p>
           <hr />
           <div
             className="markdown-body"
@@ -41,6 +42,10 @@ class Article extends Component {
           .article-right {
             width: 260px;
             float: right;
+          }
+          .article-time {
+            font-size: 14px;
+            margin: 10px 20px;
           }
         `}</style>
       </Blog >
