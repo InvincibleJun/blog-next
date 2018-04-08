@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "set NODE_ENV=development && node server.js",
+    "dev": "set NODE_ENV=development&& node server.js",
     "build": "next build",
     "start": "node server.js",
     "init": "next init",
     "lint": "eslint ./ --ext .js --cache --fix"
   },
   "pre-commit": [
-    // "lint"
+    "lint"
   ],
   "author": "chenjun",
   "license": "ISC",

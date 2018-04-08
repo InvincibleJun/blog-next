@@ -1,5 +1,6 @@
 const express = require("express");
 const next = require("next");
+// const config = require('../config/client');
 
 const app = next({ dev: process.env.NODE_ENV });
 const handle = app.getRequestHandler();
