@@ -1,28 +1,28 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import Link from "next/link";
+import React, { Component } from 'react'
+// import styled from 'styled-components'
+import Link from 'next/link'
 
-let isCustom = false;
+let isCustom = false
 class Menu extends Component {
   state = {
     isCustom
   }
-  componentDidMount() {
-    isCustom = true;
-    this.refs['title'].addEventListener("webkitAnimationEnd", () => {
+  componentDidMount () {
+    isCustom = true
+    this.refs['title'].addEventListener('webkitAnimationEnd', () => {
       this.setState({ isCustom })
-    });
+    })
   }
-  render() {
+  render () {
     const { isCustom } = this.state
     return (
-      <div className={`animated ${isCustom ? '' : 'fadeInDown'}`} ref="title">
+      <div className={`animated ${isCustom ? '' : 'fadeInDown'}`} ref='title'>
         <p>Jarvan's Blog</p>
         <ul>
-          <Link href="/">
+          <Link href='/'>
             <a>Home</a>
           </Link>
-          <Link href="/blog">
+          <Link href='/blog'>
             <a>Blog</a>
           </Link>
         </ul>
@@ -30,7 +30,8 @@ class Menu extends Component {
           div {
             line-height: 40px;
             height: 40px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px,
+              rgba(0, 0, 0, 0.23) 0px 3px 10px;
           }
           p {
             float: left;
@@ -42,8 +43,8 @@ class Menu extends Component {
           }
           ul {
             height: 40px;
-            background-color: #fff;      
-            marigin-left: 120px;
+            background-color: #fff;
+            margin-left: 120px;
             padding-right: 200px;
           }
           a {
@@ -54,8 +55,8 @@ class Menu extends Component {
           }
         `}</style>
       </div>
-    );
+    )
   }
 }
 
-export default Menu;
+export default Menu

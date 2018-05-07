@@ -1,31 +1,46 @@
-import React, { Component } from "react";
-import {
-  blue500,
-  green50,
-  grey900,
-  amber500,
-  blueGrey500
-} from "material-ui/styles/colors";
-import Layout from "../../components/Layout";
-import NewList from "./new-list";
+import React, { Component } from 'react'
+import { amber500 } from 'material-ui/styles/colors'
+import Layout from '../../components/Layout'
+// import NewList from './new-list'
 
-class Blog extends Component {
-  render() {
+export default class Blog extends Component {
+  render () {
     return (
       <Layout>
-        <div className="blog-header">
+        <div className='blog-header'>
           <h4>may the force be with you!</h4>
         </div>
-        <div className="blog-container">
+        <div className='blog-container'>
+          {/* eslint-disable-next-line  */}
           <div>{this.props.children}</div>
         </div>
         <style jsx>{`
           .blog-header {
             background: #282537;
-            background-image: -webkit-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
-            background-image: -moz-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
-            background-image: -o-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
-            background-image: radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+            background-image: -webkit-radial-gradient(
+              top,
+              circle cover,
+              #3c3b52 0%,
+              #252233 80%
+            );
+            background-image: -moz-radial-gradient(
+              top,
+              circle cover,
+              #3c3b52 0%,
+              #252233 80%
+            );
+            background-image: -o-radial-gradient(
+              top,
+              circle cover,
+              #3c3b52 0%,
+              #252233 80%
+            );
+            background-image: radial-gradient(
+              top,
+              circle cover,
+              #3c3b52 0%,
+              #252233 80%
+            );
             height: 80px;
             overflow: hidden;
           }
@@ -54,8 +69,6 @@ class Blog extends Component {
           }
         `}</style>
       </Layout>
-    );
+    )
   }
 }
-
-export default Blog;

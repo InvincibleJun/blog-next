@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import TextField from "material-ui/TextField";
+import React, { Component } from 'react'
+import TextField from 'material-ui/TextField'
 
 class Input extends Component {
   change = e => {
@@ -8,8 +8,16 @@ class Input extends Component {
     let value = e.target.value
     onChange && field && onChange(value, field)
   }
-  render() {
-    const { label, placeholder, style, check, value, change, errorText } = this.props
+  render () {
+    const {
+      label,
+      placeholder,
+      style,
+      check,
+      value,
+      change,
+      errorText
+    } = this.props
     // let action = {}
     // check && check.forEach(c => {
     //   let { trigger, pattern, msg, errorText } = c
@@ -30,7 +38,7 @@ class Input extends Component {
         floatingLabelText={label}
         // {...action}
         style={style}
-        fullWidth={true}
+        fullWidth
         onChange={this.change}
       />
     )
@@ -39,4 +47,4 @@ class Input extends Component {
 
 Input.state = false
 
-export default Input;
+export default Input
