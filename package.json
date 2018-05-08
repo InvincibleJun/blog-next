@@ -7,6 +7,7 @@
     "dev": "set NODE_ENV=development&& node server.js",
     "build": "next build",
     "start": "node server.js",
+    "restart": "pm2 start server",
     "init": "next init",
     "lint": "eslint ./ --ext .js --cache --fix"
   },
