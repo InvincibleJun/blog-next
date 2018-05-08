@@ -7,11 +7,13 @@
     "dev": "set NODE_ENV=development&& node server.js",
     "build": "next build",
     "start": "node server.js",
-    "restart": "pm2 start server",
+    "restart": "pm2 start server.js",
     "init": "next init",
     "lint": "eslint ./ --ext .js --cache --fix"
   },
-  "pre-commit": ["lint"],
+  "pre-commit": [
+    "lint"
+  ],
   "author": "chenjun",
   "license": "ISC",
   "dependencies": {
@@ -21,6 +23,7 @@
     "marked": "^0.3.17",
     "material-ui": "^0.20.0",
     "next": "^4.2.3",
+    "pm2": "^2.10.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "styled-components": "^2.4.0"
