@@ -77,9 +77,9 @@ class Article extends Component {
           <Anchors data={data.anchors} />
         </div>
         <div className='chunk-border article-main'>
-          <h3>{data.title}</h3>
+          <h2>{data.title}</h2>
           <p className='article-time'>
-            {moment(data.createTime).format('YYYY-MM-DD hh:mm:ss')}
+            {moment(data.createTime).format('YYYY-MM-DD HH:mm:ss')}
           </p>
           <hr />
           <div
@@ -101,8 +101,12 @@ class Article extends Component {
           hide={() => this.hide()}
         />
         <style jsx>{`
+          h2 {
+            margin-left: 20px;
+          }
           .article-main {
             width: 800px;
+            padding: 20px;
           }
           .article-right {
             width: 260px;
@@ -110,7 +114,7 @@ class Article extends Component {
           }
           .article-time {
             font-size: 14px;
-            margin: 10px 20px;
+            margin: 20px;
           }
         `}</style>
       </Blog>
