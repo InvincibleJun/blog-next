@@ -22,7 +22,7 @@ class List extends Component {
   }
 
   static propTypes = {
-    data: PropTypes.object
+    data: PropTypes.array
   }
 
   render () {

@@ -7,8 +7,6 @@ import marked from 'marked'
 import moment from 'moment'
 import PropTypes from 'prop-types'
 
-// import "../../assets/css/github-markdonw.css";
-
 class Article extends Component {
   static async getInitialProps ({ req, query }) {
     const { _id } = req ? req.params : query
@@ -19,13 +17,15 @@ class Article extends Component {
       let data = res.data.data
       data.body = marked(data.body)
       return {
-        data
+        data,
+        isApp: req && !!req.query.isApp
       }
     }
   }
 
   static propTypes = {
-    data: PropTypes.object
+    data: PropTypes.object,
+    isApp: PropTypes.boolean
   }
 
   state = {
@@ -35,7 +35,7 @@ class Article extends Component {
   }
 
   componentDidMount () {
-    this.imageInit()
+    !this.props.isApp && this.imageInit()
   }
 
   imageInit () {
@@ -69,55 +69,66 @@ class Article extends Component {
     })
   }
   render () {
-    const { data } = this.props
+    const { data, isApp } = this.props
     const { images, active, ele } = this.state
     return (
-      <Blog>
-        <div className='article-right'>
-          <Anchors data={data.anchors} />
-        </div>
-        <div className='chunk-border article-main'>
-          <h2>{data.title}</h2>
-          <p className='article-time'>
-            {moment(data.createTime).format('YYYY-MM-DD HH:mm:ss')}
-          </p>
-          <hr />
+      <div>
+        {isApp ? (
           <div
             className='markdown-body'
             dangerouslySetInnerHTML={{
               __html: data.body
             }}
           />
-          <div
-            style={{
-              height: 500
-            }}
-          />
-        </div>
-        <ImageWatch
-          images={images}
-          active={active}
-          ele={ele}
-          hide={() => this.hide()}
-        />
-        <style jsx>{`
-          h2 {
-            margin-left: 20px;
-          }
-          .article-main {
-            width: 800px;
-            padding: 20px;
-          }
-          .article-right {
-            width: 260px;
-            float: right;
-          }
-          .article-time {
-            font-size: 14px;
-            margin: 20px;
-          }
-        `}</style>
-      </Blog>
+        ) : (
+          <Blog>
+            <div className='article-right'>
+              <Anchors data={data.anchors} />
+            </div>
+            <div className='chunk-border article-main'>
+              <h2>{data.title}</h2>
+              <p className='article-time'>
+                {moment(data.createTime).format('YYYY-MM-DD HH:mm:ss')}
+              </p>
+              <hr />
+              <div
+                className='markdown-body'
+                dangerouslySetInnerHTML={{
+                  __html: data.body
+                }}
+              />
+              <div
+                style={{
+                  height: 500
+                }}
+              />
+            </div>
+            <ImageWatch
+              images={images}
+              active={active}
+              ele={ele}
+              hide={() => this.hide()}
+            />
+            <style jsx>{`
+              h2 {
+                margin-left: 20px;
+              }
+              .article-main {
+                width: 800px;
+                padding: 20px;
+              }
+              .article-right {
+                width: 260px;
+                float: right;
+              }
+              .article-time {
+                font-size: 14px;
+                margin: 20px;
+              }
+            `}</style>
+          </Blog>
+        )}
+      </div>
     )
   }
 }
