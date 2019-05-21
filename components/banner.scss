@@ -1,0 +1,35 @@
+.banner {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
+  background-color: #fff;
+  height: 60px;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  & > div {
+    margin-right: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 60px;
+  }
+}
+
+
+.github-icon {
+  vertical-align: middle;
+}
+
+.github {
+  a {
+    margin-left: 10px;
+  }
+}
+
+.email {
+  img {
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 30px;
+  }
+}

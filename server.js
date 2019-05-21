@@ -1,28 +1,69 @@
-const express = require('express')
-const next = require('next')
-// const config = require('../config/client');
-
-const app = next({ dev: process.env.NODE_ENV })
-const handle = app.getRequestHandler()
-
-app
+const express = require("express");
+const next = require("next");
+const fs = require('fs');
+try {
+  const app = next({ dev: process.env.NODE_ENV === "development" });
+  const handle = app.getRequestHandler();
+  app
   .prepare()
   .then(() => {
-    const server = express()
+    const server = express();
 
-    server.get('/blog/:_id', (req, res) => {
-      const queryParams = { _id: req.params._id }
-      app.render(req, res, '/blog/article', queryParams)
-    })
+    server.get("/favicon.ico", (req, res) => {
+      res.sendFile("./staitc/favicon.ico");
+    });
 
-    server.get('*', (req, res) => handle(req, res))
+    server.get("/blog/:_id", (req, res) => {
+      const queryParams = { _id: req.params._id };
+      app.render(req, res, "/blog/article", queryParams);
+    });
 
-    server.listen(8000, (err) => {
-      if (err) { throw err }
-      console.log('> next start at 8000')
-    })
+    server.get("*", (req, res) => handle(req, res));
+    
+
+
+    server.listen(8000, err => {
+      if (err) {
+        throw err;
+      }
+      console.log("> next start at 8000");
+    });
   })
-  .catch((ex) => {
-    console.error(ex.stack)
-    process.exit(1)
-  })
+  .catch(ex => {
+    console.log(ex);
+    // process.exit(1);
+  });
+} catch(e) {
+  console.log(e)
+}
+
+
+// app
+//   .prepare()
+//   .then(() => {
+//     const server = express();
+
+//     server.get("/favicon.ico", (req, res) => {
+//       res.sendFile("./staitc/favicon.ico");
+//     });
+
+//     server.get("/blog/:_id", (req, res) => {
+//       const queryParams = { _id: req.params._id };
+//       app.render(req, res, "/blog/article", queryParams);
+//     });
+
+//     server.get("*", (req, res) => handle(req, res));
+    
+
+
+//     server.listen(8000, err => {
+//       if (err) {
+//         throw err;
+//       }
+//       console.log("> next start at 8000");
+//     });
+//   })
+//   .catch(ex => {
+//     console.log(ex);
+//     // process.exit(1);
+//   });

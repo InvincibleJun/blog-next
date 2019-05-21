@@ -9,9 +9,8 @@ class Head extends Component {
       <NextHead>
         <meta charSet='UTF-8' />
         <title>{title || ''}</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='viewport' content='width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover' />
         <link rel='stylesheet' href='/static/css/reset.css' />
-        <link rel='stylesheet' href='/static/css/index.css' />
         <link rel='stylesheet' href='/static/css/animate.css' />
         <link rel='stylesheet' href='/static/css/github-markdonw.css' />
       </NextHead>

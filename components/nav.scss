@@ -1,0 +1,33 @@
+.box {
+  line-height: 40px;
+  height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px;
+}
+
+.title {
+  float: left;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  width: 120px;
+  background-color: black;
+}
+
+.list {
+  height: 40px;
+  background-color: #fff;
+  margin-left: 1000px;
+  a {
+    float: left;
+    width: 100px;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  .list {
+    margin-left: 0px;
+  }
+}

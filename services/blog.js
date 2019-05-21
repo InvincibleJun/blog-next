@@ -1,7 +1,7 @@
-import request from '../utils/request'
+import request from "../utils/request";
 
-export const getArticle = () => request('/v1/article/get')
+export const getArticles = query => request("/articles", { query });
 
-export const getOne = params => request('/v1/article/getOne', { params })
+export const getTags = () => request("/tags");
 
-export const getNewList = () => request('/v1/article/getNewList')
+export const getOne = params => request("/articles/:_id", { params });

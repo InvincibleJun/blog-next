@@ -6,8 +6,6 @@ import PropTypes from 'prop-types'
 
 export default class ImageWatch extends Component {
   static propTypes = {
-    // images: PropTypes.array,
-    // active: PropTypes.number,
     hide: PropTypes.func,
     ele: PropTypes.object
   }

@@ -1,0 +1,37 @@
+.header {
+  background-position: center;
+  background-size: auto 80px;
+  background-image: url(../../static/images/banner.jpg);
+  height: 80px;
+  overflow: hidden;
+}
+
+.box {
+  width: 1080px;
+  margin: 20px auto 0;
+  position: relative;
+  min-height: 600px;
+}
+
+@media (max-width: 800px) {
+  .header{
+    height: 50px;
+    background-size: auto 50px;
+  }
+  .box {
+    width: 100%;
+  }
+}
+
+
+.blog-info {
+  width: 260px;
+  float: right;
+  right: 0;
+  top: 0;
+  height: 800px;
+}
+.blog-list {
+  width: 800px;
+  height: 400px;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "blog-front",
+  "script": "./server.js",
+  "instances": "max",
+  "cwd": "./",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "error_file": "./logs/err.log",
+  "out_file": "./logs/info.log"
+}
