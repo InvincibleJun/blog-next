@@ -1,10 +1,9 @@
 import axios from "axios";
 
 const baseUrl =
-  // process.env.NODE_ENV === "development"
-    // ? "http://localhost:7777/api"
-    // :
-     "https://api.jarvan1215.online/api";
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:7777/api"
+    : "https://api.jarvan1215.online/api";
 
 export default function(url, arg = {}) {
   const { method = "get", query, params, data } = arg;
