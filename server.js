@@ -1,6 +1,6 @@
 const express = require("express");
 const next = require("next");
-const fs = require('fs');
+const path = require('path');
 
 const app = next({ dev: process.env.NODE_ENV === "development" });
 const handle = app.getRequestHandler();
@@ -11,7 +11,7 @@ app
     const server = express();
 
     server.get("/favicon.ico", (req, res) => {
-      res.sendFile("./staitc/favicon.ico");
+      res.sendFile( path.join(__dirname, "./static/favicon.ico"));
     });
 
     server.get("/blog/:_id", (req, res) => {

@@ -1,19 +1,22 @@
-import axios from 'axios';
+import axios from "axios";
 
 const baseUrl =
-  process.env.NODE_ENV === 'development' ? 'http://localhost:7777/api' : 'http://localhost:7777/api';
+  // process.env.NODE_ENV === "development"
+    // ? "http://localhost:7777/api"
+    // :
+     "https://api.jarvan1215.online/api";
 
 export default function(url, arg = {}) {
-  const { method = 'get', query, params, data } = arg;
+  const { method = "get", query, params, data } = arg;
   if (params) {
     Object.keys(params).forEach(key => {
       url = url.replace(new RegExp(`:(${key})`), (v, $1) => {
-        console.log(params[key])
-        return params[key]
-      })
-    })
+        console.log(params[key]);
+        return params[key];
+      });
+    });
   }
-  
+
   return new Promise((resolve, reject) => {
     axios({
       method,
