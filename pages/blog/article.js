@@ -69,50 +69,48 @@ class Article extends Component {
     const { data } = this.props;
     const { images, active, ele } = this.state;
     return (
-      <div>
-        <Blog>
-          <div className="chunk-border article-main">
-            <h2>{data.title}</h2>
-            <p className="article-more">
-              {data.tags.map(tag => (
-                <Tag key={tag._id} {...tag} />
-              ))}
-              <span className="article-time">
-                {moment(data.createTime).format("YYYY-MM-DD HH:mm:ss")}
-              </span>
-            </p>
-            <div
-              className="markdown-body"
-              dangerouslySetInnerHTML={{
-                __html: data.body
-              }}
-            />
-          </div>
-          <ImageWatch
-            images={images}
-            active={active}
-            ele={ele}
-            hide={() => this.hide()}
+      <Blog title={data.title}>
+        <div className="chunk-border article-main">
+          <h2>{data.title}</h2>
+          <p className="article-more">
+            {data.tags.map(tag => (
+              <Tag key={tag._id} {...tag} />
+            ))}
+            <span className="article-time">
+              {moment(data.createTime).format("YYYY-MM-DD HH:mm:ss")}
+            </span>
+          </p>
+          <div
+            className="markdown-body"
+            dangerouslySetInnerHTML={{
+              __html: data.body
+            }}
           />
-          <style jsx>{`
-            .article-main {
-              padding: 20px 20px 60px;
-            }
-            .article-right {
-              width: 260px;
-              float: right;
-            }
-            .article-more {
-              padding: 10px 0;
-              border-bottom: 1px solid #ccc;
-            }
-            .article-time {
-              font-size: 14px;
-              margin-left: 20px;
-            }
-          `}</style>
-        </Blog>
-      </div>
+        </div>
+        <ImageWatch
+          images={images}
+          active={active}
+          ele={ele}
+          hide={() => this.hide()}
+        />
+        <style jsx>{`
+          .article-main {
+            padding: 20px 20px 60px;
+          }
+          .article-right {
+            width: 260px;
+            float: right;
+          }
+          .article-more {
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+          }
+          .article-time {
+            font-size: 14px;
+            margin-left: 20px;
+          }
+        `}</style>
+      </Blog>
     );
   }
 }
