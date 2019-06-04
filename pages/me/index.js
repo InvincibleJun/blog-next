@@ -30,11 +30,11 @@ export default class Me extends Component {
               {/* <i className={style["i-github"]} /> */}
               <span>https://github.com/InvincibleJun</span>
             </p>
-            <p>
-              Facebook:
-              {/* <i className={style["i-github"]} /> */}
-              <span>https://github.com/InvincibleJun</span>
-            </p>
+//             <p>
+//               Facebook:
+//               {/* <i className={style["i-github"]} /> */}
+//               <span>https://github.com/InvincibleJun</span>
+//             </p>
           </div>
           {/* <div className={style.skill}>
             <Process name="javascript" percent="80" />
