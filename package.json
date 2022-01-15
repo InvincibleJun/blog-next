@@ -22,7 +22,7 @@
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "file-loader": "^3.0.1",
-    "marked": "^0.6.1",
+    "marked": "^4.0.10",
     "next": "^8.0.3",
     "next-redux-wrapper": "^3.0.0-alpha.2",
     "node-sass": "^4.12.0",
